@@ -7,6 +7,7 @@ use app\widgets\Alert;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
+use yii\helpers\Url;
 use yii\helpers\Html;
 use app\assets\AppAsset;
 use app\assets\LtAppAsset;
@@ -62,7 +63,9 @@ LtAppAsset::register($this);
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="logo pull-left">
-                            <a href="index.html"><img src="images/home/logo.png" alt="" /></a>
+                            <a href="<?= Url::home() ?>">
+                                <?= Html::img("@web/images/home/logo.png", ['alt' => 'E-SHOPPER']) ?>
+                            </a>
                         </div>
                     </div>
                     <div class="col-sm-8">
