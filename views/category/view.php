@@ -2,6 +2,7 @@
 
 use app\components\MenuWidget;
 use yii\helpers\Html;
+use yii\helpers\Url;
 use \yii\widgets\LinkPager;
 
 ?>
@@ -33,7 +34,7 @@ use \yii\widgets\LinkPager;
                                         <div class="productinfo text-center">
                                             <?= Html::img("@web/images/products/{$product->img}", ['alt' => $product->name]) ?>
                                             <h2>$<?= $product->price ?></h2>
-                                            <p><?= $product->name ?></p>
+                                            <p><a href="<?= Url::to(['product/view', 'id' => $product->id]) ?>"><?= $product->name ?></a></p>
                                             <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
                                         </div>
                                         <?php if ($product->new): ?>
@@ -42,13 +43,6 @@ use \yii\widgets\LinkPager;
                                         <?php if ($product->sale): ?>
                                             <?= Html::img("@web/images/home/sale.png", ['alt' => 'Распродажа', 'class' => 'new']) ?>
                                         <?php endif; ?>
-                                        <!--<div class="product-overlay">
-                                            <div class="overlay-content">
-                                                <h2>$56</h2>
-                                                <p>Easy Polo Black Edition</p>
-                                                <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
-                                            </div>
-                                        </div>-->
                                     </div>
                                 </div>
                             </div>
@@ -62,13 +56,6 @@ use \yii\widgets\LinkPager;
                     <?php else: ?>
                         <h2>Товаров пока нет</h2>
                     <?php endif; ?>
-
-                    <!--<ul class="pagination">
-                        <li class="active"><a href="">1</a></li>
-                        <li><a href="">2</a></li>
-                        <li><a href="">3</a></li>
-                        <li><a href="">&raquo;</a></li>
-                    </ul>-->
                 </div><!--features_items-->
 
             </div>
