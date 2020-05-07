@@ -41,8 +41,8 @@ LtAppAsset::register($this);
                     <div class="col-sm-6">
                         <div class="contactinfo">
                             <ul class="nav nav-pills">
-                                <li><a href="#"><i class="fa fa-phone"></i> +38 093 000 11 22</a></li>
-                                <li><a href="#"><i class="fa fa-envelope"></i> zinchenko.us@gmail.com</a></li>
+                                <li><a href="#"><i class="fa fa-phone"></i> +7 900 000 11 22</a></li>
+                                <li><a href="#"><i class="fa fa-envelope"></i> mvaload@gmail.com</a></li>
                             </ul>
                         </div>
                     </div>
@@ -50,6 +50,9 @@ LtAppAsset::register($this);
                         <div class="social-icons pull-right">
                             <ul class="nav navbar-nav">
                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
                                 <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
                             </ul>
                         </div>
@@ -120,8 +123,8 @@ LtAppAsset::register($this);
         <div class="footer-bottom">
             <div class="container">
                 <div class="row">
-                    <p class="pull-left">Copyright © 2015</p>
-                    <p class="pull-right">Курс PHP Start</p>
+                    <p class="pull-left">Copyright © 2020</p>
+                    <p class="pull-right">E-SHOPPER Inc. All rights reserved.</p>
                 </div>
             </div>
         </div>
