@@ -39,6 +39,7 @@ use \yii\widgets\LinkPager;
                                             <span>US $<?= $product->price ?></span>
                                             <label>Количество:</label>
                                             <input type="text" value="1" />
+
                                             <button type="button" class="btn btn-fefault cart">
                                                 <i class="fa fa-shopping-cart"></i>
                                                 В корзину
@@ -92,7 +93,9 @@ use \yii\widgets\LinkPager;
 
                                                 <h2>$<?= $hit->price ?></h2>
                                                 <p><a href="<?= Url::to(['product/view', 'id' => $hit->id]) ?>"><?= $hit->name ?></a></p>
-                                                <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                                                <a href="<?= Url::to(['cart/add', 'id' => $hit->id]) ?>" data-id="<?= $hit->id ?>" class="btn btn-default add-to-cart">
+                                                    <i class="fa fa-shopping-cart"></i>В корзину
+                                                </a>
                                             </div>
 
                                         </div>
