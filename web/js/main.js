@@ -1,14 +1,49 @@
 /*price range*/
 
- $('#sl2').slider();
+$('#sl2').slider();
 
 $('.catalog').dcAccordion({
 	speed: 300
 });
-	var RGBChange = function() {
-	  $('#RGB').css('background', 'rgb('+r.getValue()+','+g.getValue()+','+b.getValue()+')')
-	};	
-		
+function showCart(cart) {
+	$('#cart .modal-body').html(cart);
+	$('#cart').modal();
+}
+function clearCart() {
+	$.ajax({
+		url: '/cart/clear',
+		type: 'GET',
+		success: function (res) {
+			if (!res) alert('Ошибка!');
+			showCart(res);
+		},
+		error: function () {
+			console.log('Error!')
+		}
+	});
+}
+
+$('.add-to-cart').on('click', function (e) {
+	e.preventDefault();
+	let id = $(this).data('id');
+	$.ajax({
+		url: '/cart/add',
+		data: {id: id},
+		type: 'GET',
+		success: function (res) {
+			if (!res) alert('Ошибка!');
+			showCart(res);
+		},
+		error: function () {
+			console.log('Error!')
+		}
+	});
+});
+
+var RGBChange = function() {
+	$('#RGB').css('background', 'rgb('+r.getValue()+','+g.getValue()+','+b.getValue()+')')
+};
+
 /*scroll to top*/
 
 $(document).ready(function(){
