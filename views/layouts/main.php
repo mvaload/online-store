@@ -75,7 +75,7 @@ LtAppAsset::register($this);
                     <div class="col-sm-8">
                         <div class="shop-menu pull-right">
                             <ul class="nav navbar-nav">
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i> Корзина</a></li>
+                                <li><a href="#" onclick="return getCart()"><i class="fa fa-shopping-cart"></i> Корзина</a></li>
                                 <li><a href="#"><i class="fa fa-user"></i> Аккаунт</a></li>
                                 <li><a href="#"><i class="fa fa-lock"></i> Вход</a></li>
                             </ul>
@@ -149,7 +149,7 @@ LtAppAsset::register($this);
         'id' => 'cart',
         'size' => 'modal-lg',
         'footer' => '<button type="button" class="btn btn-default" data-dismiss="modal">Продолжить покупку</button>
-                     <button type="button" class="btn btn-success">Оформить заказ</button>
+                     <a href="' . Url::to(['cart/view']) . '" class="btn btn-success">Оформить заказ</a>
                      <button type="button" class="btn btn-danger" onclick="clearCart()">Очистить корзину</button>'
     ]);
     Modal::end();

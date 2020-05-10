@@ -38,12 +38,11 @@ use \yii\widgets\LinkPager;
                                 <span>
                                             <span>US $<?= $product->price ?></span>
                                             <label>Количество:</label>
-                                            <input type="text" value="1" />
-
-                                            <button type="button" class="btn btn-fefault cart">
+                                            <input type="text" value="1" id="qty"/>
+                                            <a href="#" data-id="<?= $product->id ?>" class="btn btn-fefault add-to-cart cart">
                                                 <i class="fa fa-shopping-cart"></i>
                                                 В корзину
-                                            </button>
+                                            </a>
                                         </span>
                                 <p><b>Наличие:</b> На складе</p>
                                 <p><b>Состояние:</b> Новое</p>

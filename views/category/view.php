@@ -35,7 +35,7 @@ use \yii\widgets\LinkPager;
                                             <?= Html::img("@web/images/products/{$product->img}", ['alt' => $product->name]) ?>
                                             <h2>$<?= $product->price ?></h2>
                                             <p><a href="<?= Url::to(['product/view', 'id' => $product->id]) ?>"><?= $product->name ?></a></p>
-                                            <a href="<?= Url::to(['cart/add', 'id' => $product->id]) ?>" data-id="<?= $product->id ?>" class="btn btn-default add-to-cart">
+                                            <a href="#" data-id="<?= $product->id ?>" class="btn btn-default add-to-cart">
                                                 <i class="fa fa-shopping-cart"></i>В корзину
                                             </a>
                                         </div>
