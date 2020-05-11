@@ -69,6 +69,10 @@ class CartController extends AppController
                 $order->saveOrderItems($session['cart'], $order->id);
                 Yii::$app->session->setFlash('success',
                 'Ваш заказ принят. Менеджер вскоре свяжется с Вами');
+                Yii::$app->mailer->compose('order', ['session' => $session])
+                    ->setFrom(['test@mail.ru' => 'online-store'])
+                    ->setTo($order->email)
+                    ->send();
                 $session->remove('cart');
                 $session->remove('cart.qty');
                 $session->remove('cart.sum');
