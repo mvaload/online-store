@@ -1,11 +1,10 @@
-<ul>
-    <li><a href="">Item 1</a></li>
-    <li><a href="">Item 2</a>
-        <ul>
-            <li></li>
-        </ul>
-    </li>
-    <li><a href="">Item 3</a></li>
-    <li><a href="">Item 4</a></li>
-    <li><a href="">Item 5</a></li>
-</ul>
+<option
+    value="<?= $category['id'] ?>"
+    <?php if ($category['id'] == $this->model->parent_id) echo ' selected'?>
+    <?php if ($category['id'] == $this->model->id) echo ' disabled'?>
+    ><?= $tab . $category['name'] ?></option>
+<?php if (isset($category['childs'])): ?>
+    <ul>
+        <?= $this->getMenuHtml($category['childs'], $tab . '-') ?>
+    </ul>
+<?php endif; ?>
